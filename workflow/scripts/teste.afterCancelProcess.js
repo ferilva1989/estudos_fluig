@@ -1,0 +1,1 @@
+function afterCancelProcess(colleagueId,processId){}
