@@ -147,7 +147,9 @@
 					<i class="fluigicon fluigicon-users icon-xs"> </i>Responsáveis
 				</div>
 				<div class="panel-body">
-					<table tablename="responsaveisTabela" class="table table-hover" addbuttonlabel="Adicionar Responsável" addbuttonclass="btn btn-info">
+					<table tablename="responsaveisTabela" class="table table-hover"
+						addbuttonlabel="Adicionar Responsável"
+						addbuttonclass="btn btn-info">
 						<thead>
 							<tr>
 								<td>Responsáveis</td>
@@ -155,7 +157,8 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td><input type="zoom" id="responsaveis" name="responsaveis"
+								<td><input type="zoom" id="responsaveis"
+									name="responsaveis"
 									data-zoom="{
 										        'displayKey':'colleagueName',
 										        'datasetId':'colleague',
@@ -189,6 +192,11 @@
 						<div class="form-group col-md-2">
 							<label for="valor">Valor</label> <input type="number"
 								name="valor" id="valor" class="form-control">
+						</div>
+						<div class="form-group col-md-2">
+							<label for="moeda">Moeda</label> <select name="moeda" id="moeda"
+								class="form-control" dataset="dsMoedas" datasetkey="Simbolo"
+								datasetvalue="nomeMoeda"></select>
 						</div>
 					</div>
 				</div>
