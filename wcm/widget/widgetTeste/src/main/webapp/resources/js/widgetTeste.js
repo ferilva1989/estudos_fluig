@@ -4,9 +4,9 @@ var MyWidget = SuperWidget.extend({
     variavelCaracter: null,
 
     //método iniciado quando a widget é carregada
-    init: function() {
+    init: function () {
     },
-  
+
     //BIND de eventos
     bindings: {
         local: {
@@ -14,8 +14,8 @@ var MyWidget = SuperWidget.extend({
         },
         global: {}
     },
- 
-    executeAction: function(htmlElement, event) {
+
+    executeAction: function (htmlElement, event) {
     }
 
 });

@@ -2,5 +2,5 @@
 <jboss-web>
     <context-root>/layoutTeste</context-root>
     <disable-cross-context>false</disable-cross-context>
-<!-- security-domain>java:/jaas/TOTVSTech</security-domain -->
+    <!-- security-domain>java:/jaas/TOTVSTech</security-domain -->
 </jboss-web>
