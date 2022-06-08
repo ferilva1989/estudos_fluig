@@ -1,58 +1,62 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
 
-<head>
-	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css" />
-	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
-	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
-	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<body>
-	<div class="fluig-style-guide">
-		<form name="form" role="form">
-			<div class="panel panel-primary">
-				<div class="panel-heading">
-					<i class="fluigicon fluigicon-user icon-xs"> </i>Requisitante
-				</div>
-				<div class="panel-body">
-					<div class="row">
-						<div class="form-group col-md-6">
-							<label for="nome">Nome</label> <input type="text" name="nome" id="nome"
-								class="form-control">
+		<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css" />
+		<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+		<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+		<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="fluig-style-guide">
+			<form name="form" role="form">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<i class="fluigicon fluigicon-user icon-xs"> </i>Requisitante
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="form-group col-md-6">
+								<label for="nome">Nome</label> <input type="text" name="nome" id="nome"
+									class="form-control">
+							</div>
+							<div class="form-group col-md-4">
+								<label for="email">E-mail</label> <input type="email" name="email" id="email"
+									class="form-control">
+							</div>
+							<div class="form-group col-md-2">
+								<label for="telefone">Telefone</label> <input type="text" name="telefone" id="telefone"
+									class="form-control">
+							</div>
 						</div>
-						<div class="form-group col-md-4">
-							<label for="email">E-mail</label> <input type="email" name="email" id="email"
-								class="form-control">
-						</div>
-						<div class="form-group col-md-2">
-							<label for="telefone">Telefone</label> <input type="text" name="telefone" id="telefone"
-								class="form-control">
+						<div class="row">
+							<div class="form-group col-md-2">
+								<label for="documentoidentidade">Doc. de Identidade</label> <input type="text"
+									name="documentoidentidade" id="documentoidentidade" class="form-control">
+							</div>
+							<div class="form-group col-md-2">
+								<label for="datanascimento">Data de Nascimento</label> <input type="text"
+									name="datanascimento" id="datanascimento" class="form-control">
+							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="form-group col-md-2">
-							<label for="documentoidentidade">Doc. de Identidade</label> <input type="text"
-								name="documentoidentidade" id="documentoidentidade" class="form-control">
-						</div>
-						<div class="form-group col-md-2">
-							<label for="datanascimento">Data de Nascimento</label> <input type="text"
-								name="datanascimento" id="datanascimento" class="form-control">
-						</div>
+				</div>
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<i class="fluigicon fluigicon-map-marker icon-xs"> </i>Ponto
+						Comercial
 					</div>
-				</div>
-			</div>
-			<div class="panel panel-primary">
-				<div class="panel-heading">
-					<i class="fluigicon fluigicon-map-marker icon-xs"> </i>Ponto
-					Comercial
-				</div>
-				<div class="panel-body">
-					<div class="row">
-						<div class="form-group col-md-6">
-							<label for="responsavel">Respons�vel</label>
-							<div class="zoom">
-								<input type="zoom" id="responsavel" name="responsavel" data-zoom="{
+					<div class="panel-body">
+						<div class="row">
+							<div class="form-group col-md-6">
+								<label for="responsavel">Respons�vel</label>
+								<div class="zoom">
+									<input type="zoom" id="responsavel" name="responsavel" data-zoom="{
 										        'displayKey':'colleagueName',
 										        'datasetId':'colleague',
 										        'maximumSelectionLength':'2',
@@ -71,85 +75,86 @@
 										            }
 										        ]
 										     }" />
+								</div>
 							</div>
-						</div>
-						<div class="form-group col-md-2">
-							<label for="tipoPonto">Tipo do Ponto</label>
-							<div class="radio">
-								<label><input type="radio" name="tipoPonto" id="tipoPonto"
-										value="quiosque">Quiosque</label> <label><input type="radio" name="tipoPonto"
-										id="tipoPonto" value="loja">Loja</label>
+							<div class="form-group col-md-2">
+								<label for="tipoPonto">Tipo do Ponto</label>
+								<div class="radio">
+									<label><input type="radio" name="tipoPonto" id="tipoPonto"
+											value="quiosque">Quiosque</label> <label><input type="radio"
+											name="tipoPonto" id="tipoPonto" value="loja">Loja</label>
+								</div>
 							</div>
-						</div>
-						<div class="form-group col-md-6">
-							<label for="diasfuncionamento">Dias de Funcionamento</label>
-							<div class="checkbox">
-								<label for="diasfuncionamento"><input type="checkbox" name="segunda"
-										id="diasfuncionamento" value="segunda">Segunda</label>
-								<label for="diasfuncionamento"><input type="checkbox" name="terca"
-										id="diasfuncionamento" value="terca">Ter�a</label>
-								<label for="diasfuncionamento"><input type="checkbox" name="quarta"
-										id="diasfuncionamento" value="quarta">Quarta</label>
-								<label for="diasfuncionamento"><input type="checkbox" name="quinta"
-										id="diasfuncionamento" value="quinta">Quinta</label>
-								<label for="diasfuncionamento"><input type="checkbox" name="sexta"
-										id="diasfuncionamento" value="sexta">Sexta</label>
-								<label for="diasfuncionamento"><input type="checkbox" name="sabado"
-										id="diasfuncionamento" value="sabado">S�bado</label>
-								<label for="diasfuncionamento"><input type="checkbox" name="domingo"
-										id="diasfuncionamento" value="domingo">Domingo</label>
+							<div class="form-group col-md-6">
+								<label for="diasfuncionamento">Dias de Funcionamento</label>
+								<div class="checkbox">
+									<label for="diasfuncionamento"><input type="checkbox" name="segunda"
+											id="diasfuncionamento" value="segunda">Segunda</label>
+									<label for="diasfuncionamento"><input type="checkbox" name="terca"
+											id="diasfuncionamento" value="terca">Ter�a</label>
+									<label for="diasfuncionamento"><input type="checkbox" name="quarta"
+											id="diasfuncionamento" value="quarta">Quarta</label>
+									<label for="diasfuncionamento"><input type="checkbox" name="quinta"
+											id="diasfuncionamento" value="quinta">Quinta</label>
+									<label for="diasfuncionamento"><input type="checkbox" name="sexta"
+											id="diasfuncionamento" value="sexta">Sexta</label>
+									<label for="diasfuncionamento"><input type="checkbox" name="sabado"
+											id="diasfuncionamento" value="sabado">S�bado</label>
+									<label for="diasfuncionamento"><input type="checkbox" name="domingo"
+											id="diasfuncionamento" value="domingo">Domingo</label>
+								</div>
 							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="form-group col-md-2">
-							<label for="cep">CEP</label> <input type="text" name="cep" id="cep" value=""
-								mask="00000-000" class="form-control">
-						</div>
-						<div class="form-group col-md-3">
-							<label for="logradouro">Logradouro</label> <input type="text" name="logradouro"
-								id="logradouro" value="" class="form-control">
-						</div>
-						<div class="form-group col-md-1">
-							<label for="numero">N�mero</label> <input type="number" name="numero" id="numero" value=""
-								class="form-control">
-						</div>
-						<div class="form-group col-md-2">
-							<label for="bairro">Bairro</label> <input type="text" name="bairro" id="bairro" value=""
-								class="form-control">
-						</div>
-						<div class="form-group col-md-2">
-							<label for="localidade">Cidade</label> <input type="text" name="cidade" id="localidade"
-								value="" class="form-control">
-						</div>
-						<div class="form-group col-md-1">
-							<label for="uf">Estado</label> <input type="text" name="estado" id="uf" value=""
-								class="form-control">
 						</div>
 						<div class="row">
-							<div class="form-group col-md-12">
-								<label>Informa��es Adicionais</label>
-								<textarea rows="5" name="informacoes" id="informacoes" class="form-control"></textarea>
+							<div class="form-group col-md-2">
+								<label for="cep">CEP</label> <input type="text" name="cep" id="cep" value=""
+									mask="00000-000" class="form-control">
+							</div>
+							<div class="form-group col-md-3">
+								<label for="logradouro">Logradouro</label> <input type="text" name="logradouro"
+									id="logradouro" value="" class="form-control">
+							</div>
+							<div class="form-group col-md-1">
+								<label for="numero">N�mero</label> <input type="number" name="numero" id="numero"
+									value="" class="form-control">
+							</div>
+							<div class="form-group col-md-2">
+								<label for="bairro">Bairro</label> <input type="text" name="bairro" id="bairro" value=""
+									class="form-control">
+							</div>
+							<div class="form-group col-md-2">
+								<label for="localidade">Cidade</label> <input type="text" name="cidade" id="localidade"
+									value="" class="form-control">
+							</div>
+							<div class="form-group col-md-1">
+								<label for="uf">Estado</label> <input type="text" name="estado" id="uf" value=""
+									class="form-control">
+							</div>
+							<div class="row">
+								<div class="form-group col-md-12">
+									<label>Informa��es Adicionais</label>
+									<textarea rows="5" name="informacoes" id="informacoes"
+										class="form-control"></textarea>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="panel panel-primary">
-				<div class="panel-heading">
-					<i class="fluigicon fluigicon-users icon-xs"> </i>Respons�veis
-				</div>
-				<div class="panel-body">
-					<table tablename="responsaveisTabela" class="table table-hover"
-						addbuttonlabel="Adicionar Respons�vel" addbuttonclass="btn btn-info">
-						<thead>
-							<tr>
-								<td>Respons�veis</td>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td><input type="zoom" id="responsaveis" name="responsaveis" data-zoom="{
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<i class="fluigicon fluigicon-users icon-xs"> </i>Respons�veis
+					</div>
+					<div class="panel-body">
+						<table tablename="responsaveisTabela" class="table table-hover"
+							addbuttonlabel="Adicionar Respons�vel" addbuttonclass="btn btn-info">
+							<thead>
+								<tr>
+									<td>Respons�veis</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><input type="zoom" id="responsaveis" name="responsaveis" data-zoom="{
 										        'displayKey':'colleagueName',
 										        'datasetId':'colleague',
 										        'maximumSelectionLength':'2',
@@ -168,34 +173,35 @@
 										            }
 										        ]
 										     }" /></td>
-							</tr>
-						</tbody>
-					</table>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 				</div>
-			</div>
-			<div class="panel panel-primary">
-				<div class="panel-heading">
-					<i class="fluigicon fluigicon-money icon-xs"> </i>Financeiro
-				</div>
-				<div class="panel-body">
-					<div class="row">
-						<div class="form-group col-md-2">
-							<label for="valor">Valor</label> <input type="number" name="valor" id="valor"
-								class="form-control">
-						</div>
-						<div class="form-group col-md-2">
-							<label for="moeda">Moeda</label> <select name="moeda" id="moeda" class="form-control"
-								dataset="dsMoedas" datasetkey="Simbolo" datasetvalue="nomeMoeda"></select>
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<i class="fluigicon fluigicon-money icon-xs"> </i>Financeiro
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="form-group col-md-2">
+								<label for="valor">Valor</label> <input type="number" name="valor" id="valor"
+									class="form-control">
+							</div>
+							<div class="form-group col-md-2">
+								<label for="moeda">Moeda</label> <select name="moeda" id="moeda" class="form-control"
+									dataset="dsMoedas" datasetkey="Simbolo" datasetvalue="nomeMoeda"></select>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</form>
-	</div>
-</body>
-<script type="text/javascript" src="cep.js"></script>
-<script type="text/javascript">
-	var calendarDtNasc = FLUIGC.calendar('#datanascimento');
-</script>
+			</form>
+		</div>
+	</body>
+	<script type="text/javascript" src="cep.js"></script>
+	<script type="text/javascript">
+		var calendarDtNasc = FLUIGC.calendar('#datanascimento');
+
+	</script>
 
 </html>
