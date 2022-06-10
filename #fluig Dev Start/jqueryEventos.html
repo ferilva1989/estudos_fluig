@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Evento</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("p").on({
+                    mouseenter: function () {
+                        $(this).css("background-color", "lightgray");
+                    },
+                    mouseleave: function () {
+                        $(this).css("background-color", "lightblue");
+                    },
+                    click: function () {
+                        $(this).hide();
+                    }
+                });
+            });
+
+        </script>
+    </head>
+
+    <body>
+        <p>
+            $(this).hide() - Esconde o elemento clicado <br>
+
+            $("p").hide() - Esconde todos os elementos <br>
+
+            $(".test").hide() - Esconde todos os elementos com a classe test <br>
+
+            $(#test).hide() - Esconde todos os elementos com o id test <br>
+        </p>
+        
+
+    </body>
+
+</html>

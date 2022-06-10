@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Funções</title>
+        <script>
+            function myFunction () {
+                document.getElementById("demo").innerHTML = "Texto alterado pelo JavaScript!";
+            }
+            function muda() {
+                document.getElementById("demo").innerHTML = "Mudei o nome do select";
+            }
+        </script>
+    </head>
+
+    <body>
+
+        <h1>Título</h1>
+        <p id="demo">My Paragraph</p>
+        <span id="outro">Outro</span>
+        <button type="button" onclick="myFunction()">Alterar</button>
+
+        <br>
+        <br>
+
+        <select name="muda" id="muda" onchange="muda()">
+            <option value="joao">João</option>
+            <option value="maria">Maria</option>
+        </select>
+
+        <script>
+            window.alert("Hello World!");
+
+            var price1 = 5;
+            var price2 = 10;
+            var total = price1 + price2;
+
+            document.write("<p>The total price is " + total + "</p>");
+        </script>
+    </body>
+
+</html>

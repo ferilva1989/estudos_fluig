@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Array</title>
+    </head>
+
+    <body>
+        <p id="local"></p>
+        <p id="bemVindo"></p>
+
+        <script>
+            var carros = ["Fusca", "Gol", "Palio", "Uno"];
+            document.getElementById("local").innerHTML = carros[1];
+            
+            var nome = "João";
+
+            if (nome == "João") {
+                document.getElementById("bemVindo").innerHTML = "Bem-vindo, João!";
+            } else {
+                document.getElementById("bemVindo").innerHTML = "Bem-vindo, visitante!";
+            }
+        </script>
+    </body>
+
+</html>
