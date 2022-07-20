@@ -1,1 +1,1 @@
-function afterCancelProcess(colleagueId, processId) {}
+function afterCancelProcess(colleagueId, processId) { }
